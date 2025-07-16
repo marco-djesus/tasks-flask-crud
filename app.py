@@ -18,7 +18,7 @@ def creat_task():
     task_id_control += 1 # serve p/ acrescentar +1 no id, p/ ñ ter ids iguais
     tasks.append(new_task)
     print(tasks)
-    return jsonify({"message": "Nova tarefa criada com sucesso"})
+    return jsonify({"message": "Nova tarefa criada com sucesso", "id":new_task.id})
 
 # ROTA de READ
 @app.route('/tasks', methods=['GET'])
